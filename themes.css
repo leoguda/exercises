@@ -17,10 +17,11 @@
 
 body{
     margin: 0;
+    background-color: rgb(215, 210, 203);
+
 }
 main{
     margin: auto;
-    background-color: antiquewhite;
     width:95vw;
     height: 95vh;
 }
@@ -71,9 +72,10 @@ input[type="radio"]:hover{
 .car{
     width: 45rem;
     height: 35rem;
-    background-color: rgb(220, 255, 194);
+    /*background-color: rgb(220, 255, 194);*/    
     margin: auto;
-    border: 0.2rem solid green;
+    border: 0.15rem solid rgb(20, 75, 20);
+    z-index: 1;
 }
 .windows-corps{
     position: absolute;
@@ -141,6 +143,7 @@ input[type="radio"]:hover{
     margin:-1.5rem 0 0 7.5rem;
     border-top: 0.1rem solid gray;
     border-radius: 1rem;
+    z-index: 2;
 }
 .handle{
     position: absolute;
@@ -241,10 +244,22 @@ input[type="radio"]:hover{
     100%{transform: rotate(360deg)}
 }
 
+
 .left-w-w{
     margin-left:12.25rem;
 }
 .right-w-w{
     margin-left:29.25rem;
-    z-index: 1;
+    z-index: 2;
+}
+
+
+.road{
+    position: absolute;
+    width: 45rem;
+    height: 10rem;
+    background-color: #222;
+    margin-top: -5rem;
+    margin-left: 0;
+    z-index: -1; 
 }
