@@ -1,0 +1,250 @@
+:root{
+    --clr-corps:darkred;
+    --clr-windows:rgb(204, 233, 246);
+}
+
+:root:has(#dark-red:checked) {
+    --clr-corps:darkred;
+}
+
+:root:has(#dark-blue:checked) {
+    --clr-corps:darkblue;
+}
+
+:root:has(#dark-green:checked) {
+    --clr-corps:darkgreen;
+}
+
+body{
+    margin: 0;
+}
+main{
+    margin: auto;
+    background-color: antiquewhite;
+    width:95vw;
+    height: 95vh;
+}
+
+fieldset{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: center;
+    border:none;
+    margin:auto;
+    width:400px;
+    text-align: center;
+    font-family: sans-serif;
+}
+legend{
+    text-transform: uppercase;
+    padding-top: 1rem;
+}
+.label-hide{
+    display: none;
+}
+input[type="radio"]{
+    appearance: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    border:1px solid gray;
+    border-radius: 0.3rem;
+}
+input[type="radio"]:hover{
+    appearance: none;
+    width: 1.5rem;
+    height: 2.5rem;
+    border:1px solid gray;
+    border-radius: 0.3rem;
+}
+#dark-red:checked{
+    background-color: darkred;
+}
+#dark-blue:checked{
+    background-color: darkblue;
+}
+#dark-green:checked{
+    background-color: darkgreen;
+}
+
+.car{
+    width: 45rem;
+    height: 35rem;
+    background-color: rgb(220, 255, 194);
+    margin: auto;
+    border: 0.2rem solid green;
+}
+.windows-corps{
+    position: absolute;
+    width: 16rem;
+    height:7rem;
+    background-color: var(--clr-corps);
+    margin:11.5rem 0 0 16rem;
+    border-radius: 20rem 20rem 0 0;
+    border-top: 0.1rem solid #222;
+    border-right: 0.1rem solid #222;
+    border-left: 0.1rem solid #222;
+
+}
+.windows{
+    position: inherit;
+    background-color: var(--clr-windows);
+    border-radius: 10rem 0 0 0;
+}
+.left-window{
+    width: 5.5rem;
+    height: 5.64rem;
+    margin:0.64rem 0 0 0.7rem;
+    border-top: 0.1rem solid black;
+    border-bottom: 0.1rem solid black;
+
+}
+.right-window{
+    width: 5.64rem;
+    height: 8.5rem;
+    transform: rotate(90deg);
+    margin:-0.69rem 0 0 8.4rem;
+    border-left: 0.1rem solid black;
+    border-right: 0.1rem solid black;
+
+}
+.lights{
+    position:absolute;
+    width: 1.3rem;
+    height: 2rem;
+    border-radius: 0.7rem 0 0 0.7rem;
+    border-left: 1px solid gray;
+
+}
+.front-light{
+    margin:22.5rem 0 0 7.7rem;
+    background-color: orange;
+}
+.back-light{
+    transform:rotate(180deg);
+    margin:-3.5rem 0 0 36rem;
+    background-color: red;
+}
+.corps{
+    width:28rem;
+    height:8rem;
+    background-color:var(--clr-corps);
+    margin:18rem 0rem 0 8.5rem;
+    border-radius: 7rem 7rem 1rem 1rem;
+    border-top: 0.1rem solid #222;
+}
+.lower-corps{
+    width: 30rem;
+    height:1.5rem;
+    background-color:var(--clr-corps);
+    margin:-1.5rem 0 0 7.5rem;
+    border-top: 0.1rem solid gray;
+    border-radius: 1rem;
+}
+.handle{
+    position: absolute;
+    width:1.5rem;
+    height: 0.5rem;
+    border:1px solid gray;
+    background-color:azure;
+    border-radius: 0.5rem;
+    box-shadow:0 0.05rem 0.05rem #111;
+    margin: 0.7rem 0 0 11rem;
+}
+.door{
+    position: absolute;
+    width:12.3rem;
+    height: 0.05rem;
+    border:0;
+    background-color:gray;
+    border-radius: 0.5rem;
+    margin: 0.1rem 0 0 7.95rem;    
+    transform: rotate(90deg);
+}
+
+.place-for-wheels{
+    position: absolute;
+    width:6rem;
+    height: 3.2rem;
+    background-color: rgb(80, 79, 79);
+    margin-top:-3.26rem;
+    border-top: 0.1rem solid #222;
+    border-radius: 10rem 10rem 0 0;
+}
+.left-p-f-w{
+    margin-left:11rem;
+}
+.right-p-f-w{
+    margin-left:28rem;
+}
+.wheels{
+    position: absolute;
+    width: 40rem;
+    height: 8rem;
+    margin:-3rem 0 0 0;
+}
+
+.wheel{    
+    position: inherit;
+    width:5.5rem;
+    height: 5.8rem;
+    background-color: black;
+    border-radius: 2.9rem;
+    animation-name: wheels;
+    animation-duration: 0.7s;
+    animation-iteration-count: infinite;
+}
+@keyframes wheels {
+    0%{transform: rotate(0deg)}
+    10%{transform: rotate(36deg)}
+    20%{transform: rotate(72deg)}
+    30%{transform: rotate(108deg)}
+    40%{transform: rotate(144deg)}
+    50%{transform: rotate(180deg)}
+    60%{transform: rotate(216deg)}
+    70%{transform: rotate(252deg)}
+    80%{transform: rotate(288deg)}
+    90%{transform: rotate(324deg)}
+    100%{transform: rotate(360deg)}
+}
+
+.left-wheel{ 
+    margin: 0 0 0 11.25rem;
+}
+.right-wheel{
+    margin: 0 0 0 28.25rem;
+}
+.wheel-white{
+    position: absolute;
+    width:3.5rem;
+    height: 3.7rem;
+    background-color: rgba(255, 255, 255, 0.863);
+    border-radius: 2.9rem;
+    margin-top:1rem;
+    animation-name: wheel-white;
+    animation-duration: 0.7s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes wheel-white {
+    0%{transform: rotate(0deg)}
+    10%{transform: rotate(36deg)}
+    20%{transform: rotate(72deg)}
+    30%{transform: rotate(108deg)}
+    40%{transform: rotate(144deg)}
+    50%{transform: rotate(180deg)}
+    60%{transform: rotate(216deg)}
+    70%{transform: rotate(252deg)}
+    80%{transform: rotate(288deg)}
+    90%{transform: rotate(324deg)}
+    100%{transform: rotate(360deg)}
+}
+
+.left-w-w{
+    margin-left:12.25rem;
+}
+.right-w-w{
+    margin-left:29.25rem;
+    z-index: 1;
+}
